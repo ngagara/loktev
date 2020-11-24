@@ -1,6 +1,7 @@
 .cache/
 coverage/
 dist/
+dev/
 !dist/index.html
 node_modules/
 *.log
