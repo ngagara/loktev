@@ -1,0 +1,10 @@
+.links {
+  @include currenFont(0.8em, 1em, 700);
+  color:$blueColore;
+  cursor: pointer;
+  text-decoration: none;
+
+    &:hover {
+    opacity: 0.6;
+  }
+}

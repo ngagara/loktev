@@ -1,0 +1,5 @@
+.page {
+  @include dumbAsid;
+  @include optimizeLegibility;
+  font-family: $fontMontserrat;
+}

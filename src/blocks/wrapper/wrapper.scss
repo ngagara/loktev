@@ -1,0 +1,64 @@
+.wrapper {
+    text-align: center;
+    @include currenFont(1em, 1.5em, 700);
+    @include lineGrid(2, 12, 7, 8);
+
+      &__sub {
+        color: $blueColore;
+        @include currenFont(0.5em, 0.6em, 700);
+        @include letterSpacing(1em)
+      }
+
+      &__glitch {
+        position: relative;
+        color: $whiteColor;
+        @include dumbAsid;
+        @include currenFont(1.5em, 1.6em, 700);
+        @include letterSpacing(0.6em);
+        animation: glitch-skew 1s infinite linear alternate-reverse;
+      
+        &::before {
+          @include glitchCopy;
+          left: 2px;
+          text-shadow: -2px 0 $pinkGlitchColore;
+          clip: rect(44px, 450px, 56px, 0);
+          animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+      
+        &::after {
+          @include glitchCopy;
+          left: -2px;
+          text-shadow: -2px 0 $blueGlitchColore, 2px 2px $pinkGlitchColore;
+          animation: glitch-anim2 1s infinite linear alternate-reverse;
+        }
+      }
+  }
+
+  @keyframes glitch-anim {
+    $steps: 20;
+    @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+        transform: skew((random(100) / 100) + deg);
+      }
+    }
+  }
+  
+  @keyframes glitch-anim2 {
+    $steps: 20;
+    @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+        clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+        transform: skew((random(100) / 100) + deg);
+      }
+    }
+  }
+  
+  @keyframes glitch-skew {
+    $steps: 10;
+    @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+        transform: skew((random(10) - 5) + deg);
+      }
+    }
+  }

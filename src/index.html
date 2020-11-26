@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -7,10 +8,28 @@
     <meta name="keywords" content="HTML5, CSS, SCSS, JS, Parcel" />
     <meta name="author" content="Николай Гагара" />
     <title>ПРЕЗИДЕНТ РОССИИ</title>
-    <link rel="icon" href="./images/paw.svg" type="image/svg+xml" />
+    <link rel="icon" href="./images/crown.svg" type="image/svg+xml" />
   </head>
   <body class="page">
-
+    <heade class="header page__header">
+      <div class="header__menu">
+        <img class="logo header__logo"src="./images/crown.svg" alt="лого">
+        <button class="header__open" data-text="кнопка открытия меню"></button>
+        <button class="header__close" data-text="кнопка закртия меню"></button>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__items">
+          <li class="header__item links">ПРЕЗИДЕНТ</li>
+          <li class="header__item links">ГАЛЕРЕЯ</li>
+          <li class="header__item links">НАПИСАТЬ ПИСЬМО</li>
+          <li class="header__item"><a class="header__link links" href="">КОНТАКТЫ</a></li>
+        </ul>
+      </nav>
+        <div class="wrapper header__wrapper">
+          <h1 class="wrapper__glitch" data-text="ПРЕЗИДЕНТ">ПРЕЗИДЕНТ</h1>
+          <span class="wrapper__sub">РОССИИ</span>
+        </div>
+    </heade>
     <script src="./index.js"></script>
   </body>
 </html>

@@ -1,0 +1,73 @@
+@mixin optimizeLegibility {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}
+
+@mixin glitchCopy {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin dumbAsid {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin currenFont($size, $height, $weight) {
+  font-family: $fontMontserrat;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin navIcon($url) {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  outline-style: none;
+  border: none;
+  background: url($url);
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin letterSpacing($em){
+  letter-spacing: $em;
+}
+
+@mixin repeatGrid ($numColumn: 0, $sizeColumn: 0, $numRow: 0, $sizeRow: 0){
+  display: grid;
+  grid-template-columns: repeat($numColumn, $sizeColumn);
+  grid-template-rows: repeat($numRow, $sizeRow);
+}
+
+@mixin lineGrid($startColumn, $endColumn, $startRow, $endRow) {
+  grid-column-start: $startColumn;
+  grid-column-end: $endColumn;
+  grid-row-start: $startRow;
+  grid-row-end: $endRow;
+}
+
+@mixin bgGradient($url) {
+  background: linear-gradient(rgba(10, 10, 10, 0.6), rgba(0, 0, 0, 0.9)),
+  repeating-linear-gradient(
+    0,
+    transparent,
+    transparent 2px,
+    black 3px,
+    black 3px
+  ),
+  url($url);
+  background-size: cover;
+  background-position: center;
+}
