@@ -28,21 +28,23 @@
   font-weight: $weight;
 }
 
+@mixin logoAdaptive($wh, $hv){
+  width: $wh;
+  height: $hv;
+  align-self: flex-end;
+}
+
 @mixin navIcon($url) {
   position: absolute;
   top: 6px;
   right: 0;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   outline-style: none;
   border: none;
   background: url($url);
   background-size: cover;
   background-position: center;
-}
-
-@mixin letterSpacing($em){
-  letter-spacing: $em;
 }
 
 @mixin repeatGrid ($numColumn: 0, $sizeColumn: 0, $numRow: 0, $sizeRow: 0){
@@ -51,7 +53,7 @@
   grid-template-rows: repeat($numRow, $sizeRow);
 }
 
-@mixin lineGrid($startColumn, $endColumn, $startRow, $endRow) {
+@mixin lineGrid($startColumn: 0, $endColumn: 0, $startRow: 0, $endRow: 0) {
   grid-column-start: $startColumn;
   grid-column-end: $endColumn;
   grid-row-start: $startRow;

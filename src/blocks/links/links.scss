@@ -1,10 +1,14 @@
 .links {
   @include currenFont(0.8em, 1em, 700);
-  color:$blueColore;
+  color: $blueColore;
   cursor: pointer;
   text-decoration: none;
 
-    &:hover {
+  @media (min-width: $laptopWidth) {
+    @include currenFont(1em, 1.2em, 700);
+  }
+
+  &:hover {
     opacity: 0.6;
   }
 }

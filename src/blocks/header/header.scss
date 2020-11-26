@@ -1,45 +1,91 @@
 .header {
-    background: $blackColor;
-    height: 100vh;
-    width: 100%;
-    @include dumbAsid;
-    @include repeatGrid (12, 1fr, 12, 1fr);
-    @include bgGradient($bgUrl);
+  background: $blackColor;
+  height: 100%;
+  width: 100%;
+  @include repeatGrid(12, 1fr, 12, 1fr);
+  @include bgGradient($bgUrl);
 
-    &__menu {
-        @include lineGrid(2, 12, 1, 2);
-        @include repeatGrid ($numColumn: 2, $sizeColumn: auto);
-        justify-content: space-between;
-        position: relative;
-        top: 10px;
-        padding-bottom: 10px;
-       }
-
-       &__open {
-        @include navIcon($iconMenuUrl);
-      }
-      &__close {
-        @include navIcon($iconCloseUrl);
-      }
-      
-      &__nav {
-        @include dumbAsid;
-        @include lineGrid(2, 12, 2, 6);
-        color: $whiteColor;
-      }
-      
-      &__items {
-        @include repeatGrid ($numRow: 4, $sizeRow: 1fr);
-        @include dumbAsid;
-      }
-      
-      &__item {
-        list-style: none;
-        text-align: center;
-        border-bottom: 1px solid $whiteColor; 
-        margin-top: 10px;
-      }
+  &__menu {
+    @include lineGrid(
+      $startColumn: 2,
+      $endColumn: 12,
+      $startRow: 1,
+      $endRow: 5
+    );
+    @include repeatGrid($numColumn: 2, $sizeColumn: 1fr);
+    justify-content: space-between;
+    position: relative;
+    @media (min-width: $tabletWidth) {
+      @include lineGrid(
+        $startColumn: 2,
+        $endColumn: 12,
+        $startRow: 1,
+        $endRow: 2
+      );
+      @include repeatGrid($numColumn: 8, $sizeColumn: 1fr);
+    }
   }
-  
 
-  
+  &__open {
+    @include navIcon($iconMenuUrl);
+    @media (min-width: $tabletWidth) {
+      display: none;
+    }
+  }
+  &__close {
+    @include navIcon($iconCloseUrl);
+    @media (min-width: $tabletWidth) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    @include dumbAsid;
+    @include lineGrid(
+      $startColumn: 1,
+      $endColumn: 12,
+      $startRow: 2,
+      $endRow: 6
+    );
+    color: $whiteColor;
+    text-align: center;
+    @media (min-width: $tabletWidth) {
+      @include lineGrid(
+        $startColumn: 3,
+        $endColumn: 9,
+        $startRow: 1,
+        $endRow: 2
+      );
+      align-self: flex-end;
+    }
+  }
+
+  &__items {
+    @include repeatGrid($numRow: 4, $sizeRow: 1fr);
+    @include dumbAsid;
+    @media (min-width: $tabletWidth) {
+      @include repeatGrid(
+        $numRow: 1,
+        $sizeRow: 1fr,
+        $numColumn: 4,
+        $sizeColumn: 1fr
+      );
+    }
+  }
+
+  &__item {
+    list-style: none;
+    border-bottom: 1px solid $whiteColor;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    @media (min-width: $tabletWidth) {
+      border-bottom: none;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+}
