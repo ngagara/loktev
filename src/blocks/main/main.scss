@@ -1,8 +1,6 @@
 .main {
   @include bgGradient($bgUrlMain, $opacituTop: 0.8, $opacituBottom: 0.8);
-  @media (min-width: $tabletWidth) {
-    @include imageSize($wt: 100%, $ht: 100vh);
-  }
+  @include imageSize($wt: 100%, $ht: 100%);
 
   &__link {
     display: block;

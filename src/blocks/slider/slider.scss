@@ -17,5 +17,8 @@
     padding-left: 10px;
     padding-right: 10px;
     color: $blueColor;
+    overflow: hidden;
+    max-width: 270px;
+    max-height: 12px;
   }
 }
