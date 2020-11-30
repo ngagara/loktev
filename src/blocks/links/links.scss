@@ -1,11 +1,15 @@
 .links {
   @include currenFont(0.8em, 1em, 700);
-  color: $blueColore;
+  color: $blueColor;
   cursor: pointer;
   text-decoration: none;
 
-  @media (min-width: $laptopWidth) {
+  @media (min-width: $tabletWidth) {
     @include currenFont(1em, 1.2em, 700);
+  }
+
+  @media (min-width: $laptopWidth) {
+    @include currenFont(1.1em, 1.3em, 700);
   }
 
   &:hover {

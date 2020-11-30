@@ -1,15 +1,21 @@
+
 //colors;
 $blackColor: rgb(10, 10, 10);
 $whiteColor: rgb(255, 255, 255);
-$blueColore: rgb(100, 220, 220);
-$pinkGlitchColore: #ff00c1;
-$blueGlitchColore: #00fff9;
+$blueColor: rgb(100, 220, 220);
+$pinkGlitchColor: #ff00c1;
+$blueGlitchColor: #00fff9;
+
 //fonts;
 $fontMontserrat: "Montserrat", sans-serif;
+
 //url
 $iconCloseUrl: "./images/close.svg";
 $iconMenuUrl: "./images/menu.svg";
-$bgUrl: "./images/cover.jpg";
+$bgUrlHeader: "./images/cover.jpg";
+$bgUrlMain: "./images/dante.jpg";
+// $bgUrlFooter: "./images/dante.jpg";
+
 //mediascreen
-$tabletWidth: 768px;
+$tabletWidth: 769px;
 $laptopWidth: 1024px;

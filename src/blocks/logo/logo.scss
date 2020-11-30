@@ -1,11 +1,12 @@
 .logo {
-  @include logoAdaptive(35px, 35px);
-
+  @include imageSize(35px, 35px);
+  align-self: flex-end;
+  
   @media (min-width: $tabletWidth) {
-    @include logoAdaptive(45px, 45px);
+    @include imageSize(45px, 45px);
   }
   
   @media (min-width: $laptopWidth) {
-    @include logoAdaptive(50px, 50px);
+    @include imageSize(50px, 50px);
   }
 }

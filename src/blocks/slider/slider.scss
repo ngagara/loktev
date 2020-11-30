@@ -1,0 +1,21 @@
+.slider {
+  .swiper-button-next,
+  .swiper-button-prev {
+    @include imageSize($wt: 60px, $ht: 60px);
+    outline: none;
+  }
+
+  &__image {
+    @include bgPosition;
+    @include imageSize($wt: 288px, $ht: 288px);
+    @include setBorder(2px, solid, $blueColor);
+  }
+
+  &__comment {
+    @include dumbAsid;
+    @include currenFont(0.7em, 1em, 700);
+    padding-left: 10px;
+    padding-right: 10px;
+    color: $blueColor;
+  }
+}

@@ -7,17 +7,18 @@
   }
   @media (min-width: $laptopWidth) {
     @include currenFont(2em, 1.8em, 700);
+    @include lineGrid($startColumn: 2, $endColumn: 12, $startRow: 5, $endRow: 7);
   }
 
   &__sub {
-    color: $blueColore;
+    color: $blueColor;
     @include currenFont(0.5em, 0.6em, 700);
     letter-spacing: 1em;
   }
 
   &__glitch {
     @include dumbAsid;
-    @include currenFont(1.5em, 1.6em, 700);
+    @include currenFont(1.8em, 1.6em, 700);
     letter-spacing: 0.6em;
     position: relative;
     color: $whiteColor;
@@ -26,7 +27,7 @@
     &::before {
       @include glitchCopy;
       left: 2px;
-      text-shadow: -2px 0 $pinkGlitchColore;
+      text-shadow: -2px 0 $pinkGlitchColor;
       clip: rect(44px, 450px, 56px, 0);
       animation: glitch-anim 5s infinite linear alternate-reverse;
     }
@@ -34,7 +35,7 @@
     &::after {
       @include glitchCopy;
       left: -2px;
-      text-shadow: -2px 0 $blueGlitchColore, 2px 2px $pinkGlitchColore;
+      text-shadow: -2px 0 $blueGlitchColor, 2px 2px $pinkGlitchColor;
       animation: glitch-anim2 1s infinite linear alternate-reverse;
     }
   }

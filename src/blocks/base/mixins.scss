@@ -16,6 +16,10 @@
   height: 100%;
 }
 
+@mixin setBorder($size, $line, $color) {
+  border: $size $line $color;
+}
+
 @mixin dumbAsid {
   margin: 0;
   padding: 0;
@@ -28,10 +32,9 @@
   font-weight: $weight;
 }
 
-@mixin logoAdaptive($wh, $hv){
-  width: $wh;
-  height: $hv;
-  align-self: flex-end;
+@mixin imageSize($wt: 0, $ht: 0) {
+  width: $wt;
+  height: $ht;
 }
 
 @mixin navIcon($url) {
@@ -43,11 +46,15 @@
   outline-style: none;
   border: none;
   background: url($url);
+  @include bgPosition;
+}
+
+@mixin bgPosition {
   background-size: cover;
   background-position: center;
 }
 
-@mixin repeatGrid ($numColumn: 0, $sizeColumn: 0, $numRow: 0, $sizeRow: 0){
+@mixin repeatGrid($numColumn: 0, $sizeColumn: 0, $numRow: 0, $sizeRow: 0) {
   display: grid;
   grid-template-columns: repeat($numColumn, $sizeColumn);
   grid-template-rows: repeat($numRow, $sizeRow);
@@ -60,16 +67,19 @@
   grid-row-end: $endRow;
 }
 
-@mixin bgGradient($url) {
-  background: linear-gradient(rgba(10, 10, 10, 0.6), rgba(0, 0, 0, 0.9)),
-  repeating-linear-gradient(
-    0,
-    transparent,
-    transparent 2px,
-    black 3px,
-    black 3px
-  ),
-  url($url);
-  background-size: cover;
-  background-position: center;
+@mixin bgGradient($url, $opacituTop: 0.6, $opacituBottom: 0.6) {
+  background: $blackColor;
+  background: linear-gradient(
+      rgba(10, 10, 10, $opacituTop),
+      rgba(0, 0, 0, $opacituBottom)
+    ),
+    repeating-linear-gradient(
+      0,
+      transparent,
+      transparent 2px,
+      black 3px,
+      black 3px
+    ),
+    url($url);
+  @include bgPosition;
 }
