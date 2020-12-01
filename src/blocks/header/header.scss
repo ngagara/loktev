@@ -44,6 +44,9 @@
     );
     color: $whiteColor;
     text-align: center;
+    &_off {
+      display: none;
+    }
     @media (min-width: $tabletWidth) {
       @include lineGrid(
         $startColumn: 3,

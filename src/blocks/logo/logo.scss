@@ -1,8 +1,8 @@
 .logo {
   @include imageSize(35px, 35px);
-  align-self: flex-end;
-  
+
   @media (min-width: $tabletWidth) {
+    align-self: flex-end;
     @include imageSize(45px, 45px);
   }
   
