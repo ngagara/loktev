@@ -11,7 +11,7 @@
       $startColumn: 2,
       $endColumn: 12,
       $startRow: 1,
-      $endRow: 5
+      $endRow: 4
     );
     @include repeatGrid($numColumn: 2, $sizeColumn: 1fr);
     justify-content: space-between;
@@ -33,12 +33,6 @@
       display: none;
     }
   }
-  &__close {
-    @include navIcon($iconCloseUrl);
-    @media (min-width: $tabletWidth) {
-      display: none;
-    }
-  }
 
   &__nav {
     @include dumbAsid;
@@ -46,7 +40,7 @@
       $startColumn: 1,
       $endColumn: 12,
       $startRow: 2,
-      $endRow: 6
+      $endRow: 5
     );
     color: $whiteColor;
     text-align: center;

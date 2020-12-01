@@ -8,9 +8,14 @@
     padding-top: 8px;
     box-sizing: border-box;
     @include setBorder(1px, solid, $blueColor);
-    // @include lineGrid($startRow: 11, $endRow: 12);
-    @include currenFont(1em, 1.2em, 700);
-    @include imageSize($wt: 160px, $ht: 40px);
+    @include imageSize($wt: 40%, $ht: 30px);
     margin: 30px auto 0;
+    @media (min-width: $tabletWidth) {
+      @include imageSize($wt: 20%, $ht: 40px);
+    }
+    @media (min-width: $laptopWidth) {
+      padding-top: 10px;
+      @include imageSize($wt: 15%, $ht: 45px);
+    }
   }
 }
