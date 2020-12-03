@@ -1,10 +1,12 @@
 .header {
-  @include bgGradient($bgUrlHeader,  $opacituTop: 0.6, $opacituBottom: 0.9);
-  @include repeatGrid($numColumn: 12, $sizeColumn: 1fr, $numRow: 12, $sizeRow: 1fr);
+  @include bgGradient($bgUrlHeader, $opacituTop: 0.6, $opacituBottom: 0.8);
+  @include repeatGrid(
+    $numColumn: 12,
+    $sizeColumn: 1fr,
+    $numRow: 12,
+    $sizeRow: 1fr
+  );
   @include imageSize($wt: 100%, $ht: 100vh);
-  @media (min-width: $tabletWidth) {
-    @include imageSize($wt: 100%, $ht: 100%);
-  }
 
   &__menu {
     @include lineGrid(
@@ -16,22 +18,10 @@
     @include repeatGrid($numColumn: 2, $sizeColumn: 1fr);
     justify-content: space-between;
     position: relative;
-    @media (min-width: $tabletWidth) {
-      @include lineGrid(
-        $startColumn: 2,
-        $endColumn: 12,
-        $startRow: 1,
-        $endRow: 2
-      );
-      @include repeatGrid($numColumn: 8, $sizeColumn: 1fr);
-    }
   }
 
   &__open {
     @include navIcon($iconMenuUrl);
-    @media (min-width: $tabletWidth) {
-      display: none;
-    }
   }
 
   &__nav {
@@ -47,28 +37,11 @@
     &_off {
       display: none;
     }
-    @media (min-width: $tabletWidth) {
-      @include lineGrid(
-        $startColumn: 3,
-        $endColumn: 9,
-        $startRow: 1,
-        $endRow: 2
-      );
-      align-self: flex-end;
-    }
   }
 
   &__items {
     @include repeatGrid($numRow: 3, $sizeRow: 1fr);
     @include dumbAsid;
-    @media (min-width: $tabletWidth) {
-      @include repeatGrid(
-        $numRow: 1,
-        $sizeRow: 1fr,
-        $numColumn: 3,
-        $sizeColumn: 1fr
-      );
-    }
   }
 
   &__item {
@@ -76,11 +49,7 @@
     border-bottom: 1px solid $whiteColor;
     padding-bottom: 5px;
     margin-top: 10px;
-    @media (min-width: $tabletWidth) {
-      border-bottom: none;
-      margin-top: 0;
-      padding-bottom: 0;
-    }
+    outline: none;
   }
 
   &__link {

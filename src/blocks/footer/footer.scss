@@ -1,6 +1,6 @@
 .footer {
-  @include bgGradient($bgUrlFooter, $opacituTop: 0.9, $opacituBottom: 0.6);
-  @include imageSize($wt: 100%, $ht: 100vh);
+  @include bgGradient($bgUrlFooter, $opacituTop: 0.8, $opacituBottom: 0.6);
+  @include imageSize($wt: 100%, $ht: 100%);
   @include repeatGrid(
     $numColumn: 12,
     $sizeColumn: 1fr,
@@ -9,6 +9,7 @@
   );
 
   &__date-container {
+    @include dumbAsid;
     @include repeatGrid($numColumn: 3, $sizeColumn: 1fr);
     @include lineGrid(
       $startColumn: 2,
@@ -17,27 +18,23 @@
       $endRow: 5
     );
     text-align: center;
-    grid-gap: 5px;
-    @media (min-width: $tabletWidth) {
-      @include lineGrid($startColumn: 4, $endColumn: 10);
-      grid-gap: 10px;
-    }
-    @media (min-width: $laptopWidth) {
-      @include lineGrid($startColumn: 5, $endColumn: 9);
-    }
   }
 
   &__date {
     color: $blueColor;
     cursor: pointer;
-    margin: 0;
+    list-style: none;
+    outline: none;
     align-self: center;
-    @include currenFont(0.8em, 1.5em, 700);
+    padding: 8px 8px 8px 8px;
+    @include currenFont(0.9em, 1em, 700);
     &:hover {
-      @include setBorder(1px, solid, $blueColor);
+      color: $blackColor;
+      background-color: $blueColor;
+      opacity: 0.6;
     }
-    @media (min-width: $tabletWidth) {
-      @include currenFont(1em, 1.1em, 700);
+    @media (min-width: $mobileL) {
+      @include currenFont(1em, 1em, 700);
     }
   }
 
@@ -54,41 +51,23 @@
       $numRow: 4,
       $sizeRow: 30px
     );
-    grid-row-gap: 10px;
-    @media (min-width: $tabletWidth) {
-      @include lineGrid($startColumn: 4, $endColumn: 10);
-      grid-gap: 20px;
-    }
-    @media (min-width: $laptopWidth) {
-      @include lineGrid($startColumn: 5, $endColumn: 9);
-    }
+    grid-row-gap: 8px;
   }
 
   &__form-input {
     background-color: $blackColor;
     color: $blueColor;
-    @include currenFont(0.8em, 1em, 700);
+    @include currenFont(0.9em, 1em, 700);
     @include lineGrid($startColumn: 1, $endColumn: 5);
     outline: none;
     padding-left: 10px;
-    @media (min-width: $tabletWidth) {
-      @include currenFont(1em, 1.1em, 700);
-    }
-    @media (min-width: $laptopWidth) {
-      @include currenFont(1em, 1.1em, 700);
-    }
   }
 
   &__form-button {
     background-color: $blackColor;
     color: $blueColor;
-    @include currenFont(0.8em, 1em, 700);
+    @include currenFont(0.9em, 1em, 700);
     @include lineGrid($startColumn: 2, $endColumn: 4);
-    @media (min-width: $tabletWidth) {
-      @include currenFont(1em, 1.1em, 700);
-    }
-    @media (min-width: $laptopWidth) {
-      @include currenFont(1em, 1.3em, 700);
-    }
+    outline: none;
   }
 }

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100');
-@import "./blocks/base/mixins.scss";
-@import "./blocks/base/variables.scss";
+@import "./blocks/base/mixins";
+@import "./blocks/base/variables";
 @import "./blocks/wrapper/wrapper";
 @import "./blocks/page/page";
 @import "./blocks/header/header";
@@ -9,6 +9,5 @@
 @import "./blocks/main/main";
 @import "./blocks/slider/slider";
 @import "./blocks/footer/footer";
-@import "./blocks/social/social";
 
 

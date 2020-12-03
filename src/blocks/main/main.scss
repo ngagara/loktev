@@ -1,21 +1,22 @@
 .main {
-  @include bgGradient($bgUrlMain, $opacituTop: 0.8, $opacituBottom: 0.8);
-  @include imageSize($wt: 100%, $ht: 100%);
+  @include bgGradient($bgUrlMain, $opacituTop: 0.7, $opacituBottom: 0.7);
+  @include imageSize($wt: 100%, $ht: 100vh);
+  display: grid;
+  align-items: center;
 
   &__link {
     display: block;
     text-align: center;
-    padding-top: 8px;
+    padding-top: 6px;
     box-sizing: border-box;
+    align-self: start;
+    justify-self: center;
     @include setBorder(1px, solid, $blueColor);
-    @include imageSize($wt: 40%, $ht: 30px);
-    margin: 30px auto 0;
-    @media (min-width: $tabletWidth) {
-      @include imageSize($wt: 20%, $ht: 40px);
-    }
-    @media (min-width: $laptopWidth) {
-      padding-top: 10px;
-      @include imageSize($wt: 15%, $ht: 45px);
+    @include imageSize($wt: 45%, $ht: 30px);
+    margin: 0;
+    @media (max-height: $tabletSize){
+      display: none;
+      
     }
   }
 }

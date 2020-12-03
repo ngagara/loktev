@@ -1,4 +1,4 @@
-import "/index.scss";
+import "./index.scss";
 import "swiper/swiper-bundle.css";
 import "./scripts/swiper";
 
@@ -7,7 +7,7 @@ const headerNavOpen = document.querySelector(".header__open");
 const sketchsLink = document.getElementById("SKETCHES");
 const singUpLink = document.getElementById("SIGN_UP");
 
-headerNavOpen.addEventListener("click", (event) => {
+headerNavOpen.addEventListener("click", () => {
     headerNav.classList.toggle("header__nav_off");
   });
 

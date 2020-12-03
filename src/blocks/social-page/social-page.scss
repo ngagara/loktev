@@ -1,0 +1,37 @@
+.social-page {
+  @include pageConfig;
+  position: relative;
+
+  &__container {
+    @include bgGradient($bgUrlMain, $opacituTop: 0.8, $opacituBottom: 0.8);
+    @include imageSize($wt: 100%, $ht: 100vh);
+    display: grid;
+    justify-content: center;
+    align-content: center;                     
+  }
+  &__tittle {
+    color: $blueGlitchColor;
+    @include currenFont(0.9em, 1.1em, 700);
+    @include dumbAsid;
+    text-align: center;
+  }
+  &__items {
+    @include repeatGrid($numColumn: 2, $sizeColumn: 1fr);
+    @include dumbAsid;
+  }
+  &__item {
+    margin: 10px 10px 10px 10px;
+    list-style: none;
+    text-align: center;
+  }
+  &__icon {
+    @include imageSize($wt: 30px, $ht: 30px);
+    
+  }
+  &__link-back {
+   position: absolute;
+   top: 20px;
+   left: 30px;
+  }
+
+}

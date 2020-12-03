@@ -1,9 +1,13 @@
 .slider {
-
+  width: 100%;
   .swiper-button-next,
   .swiper-button-prev {
     @include imageSize($wt: 60px, $ht: 60px);
     outline: none;
+    display: none;
+    @media (min-width: $mobileL) {
+      display: block;
+    }
   }
 
   &__image {

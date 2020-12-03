@@ -1,12 +1,3 @@
 .logo {
   @include imageSize(35px, 35px);
-
-  @media (min-width: $tabletWidth) {
-    align-self: flex-end;
-    @include imageSize(45px, 45px);
-  }
-  
-  @media (min-width: $laptopWidth) {
-    @include imageSize(50px, 50px);
-  }
 }

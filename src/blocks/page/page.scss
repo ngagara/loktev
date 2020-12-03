@@ -1,25 +1,7 @@
 .page {
-  @include optimizeLegibility;
-  font-family: $fontMontserrat;
-  margin: 0;
+ @include pageConfig;
 
   &__header {
     padding-top: 15px;
-    @media (min-width: $tabletWidth) {
-      padding-top: 0px;
-    }
-  }
-
-  &__main {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    @media (min-width: $tabletWidth) {
-      padding-top: 70px;
-      padding-bottom: 70px;
-    }
-    @media (min-width: $laptopWidth) {
-      padding-top: 120px;
-      padding-bottom: 150px;
-    }
   }
 }

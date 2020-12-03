@@ -32,18 +32,6 @@ export const mySwiper = new Swiper(".swiper-container", {
         slidesPerView: 2.5,
         spaceBetween: 12,
       },
-      860: {
-        slidesPerView: 2.8,
-      },
-      1024: {
-        slidesPerView: 3.2,
-      },
-      1210: {
-        slidesPerView: 3.6,
-      },
-      1280: {
-        slidesPerView: 4,
-      },
     },
     navigation: {
       nextEl: ".swiper-button-next",

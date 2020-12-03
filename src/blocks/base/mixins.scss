@@ -7,6 +7,14 @@
   -moz-text-size-adjust: 100%;
 }
 
+@mixin pageConfig {
+  @include currenFont(16px, 17px, 700);
+  font-family: $fontMontserrat;
+  background-color: $blackColor;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
 @mixin glitchCopy {
   content: attr(data-text);
   position: absolute;
