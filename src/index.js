@@ -8,13 +8,17 @@ const sketchsLink = document.getElementById("SKETCHES");
 const singUpLink = document.getElementById("SIGN_UP");
 
 headerNavOpen.addEventListener("click", () => {
-    headerNav.classList.toggle("header__nav_off");
-  });
+  headerNav.classList.toggle("header__nav_off");
+});
 
 headerNav.addEventListener("click", (event) => {
   if (event.target == sketchsLink) {
-    document.querySelector(".main").scrollIntoView({ block: "start", behavior: "smooth" });
+    document
+      .querySelector(".main")
+      .scrollIntoView({ block: "start", behavior: "smooth" });
   } else if (event.target == singUpLink) {
-    document.querySelector(".footer").scrollIntoView({ block: "start", behavior: "smooth" });
+    document
+      .querySelector(".footer")
+      .scrollIntoView({ block: "start", behavior: "smooth" });
   }
 });

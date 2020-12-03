@@ -4,23 +4,28 @@
 
   &__container {
     @include bgGradient($bgUrlMain, $opacituTop: 0.8, $opacituBottom: 0.8);
-    @include imageSize($wt: 100%, $ht: 100vh);
+    @include imageSize($wt: 100wv, $ht: 100vh);
+    gap: 10px;
     display: grid;
     justify-content: center;
     align-content: center;                     
   }
   &__tittle {
     color: $blueGlitchColor;
-    @include currenFont(0.9em, 1.1em, 700);
+    letter-spacing: 0.6em;
+    @include currenFont(0.8em, 1.4em, 700);
     @include dumbAsid;
     text-align: center;
   }
+  &__nav {
+    margin: auto;
+  }
   &__items {
-    @include repeatGrid($numColumn: 2, $sizeColumn: 1fr);
+    @include repeatGrid($numColumn: 2, $sizeColumn: 30px);
     @include dumbAsid;
+    gap: 30px;
   }
   &__item {
-    margin: 10px 10px 10px 10px;
     list-style: none;
     text-align: center;
   }

@@ -26,7 +26,7 @@
     list-style: none;
     outline: none;
     align-self: center;
-    padding: 8px 8px 8px 8px;
+    padding: 5px 5px 5px 5px;
     @include currenFont(0.9em, 1em, 700);
     &:hover {
       color: $blackColor;
@@ -49,9 +49,9 @@
       $numColumn: 4,
       $sizeColumn: 1fr,
       $numRow: 4,
-      $sizeRow: 30px
+      $sizeRow: 40px
     );
-    grid-row-gap: 8px;
+    grid-row-gap: 10px;
   }
 
   &__form-input {

@@ -7,12 +7,12 @@
   &__link {
     display: block;
     text-align: center;
-    padding-top: 6px;
+    padding-top: 10px;
     box-sizing: border-box;
     align-self: start;
     justify-self: center;
     @include setBorder(1px, solid, $blueColor);
-    @include imageSize($wt: 45%, $ht: 30px);
+    @include imageSize($wt: 45%, $ht: 40px);
     margin: 0;
     @media (max-height: $tabletSize){
       display: none;

@@ -1,12 +1,12 @@
 .header {
   @include bgGradient($bgUrlHeader, $opacituTop: 0.6, $opacituBottom: 0.8);
+  @include imageSize($wt: 100%, $ht: 100vh);
   @include repeatGrid(
     $numColumn: 12,
     $sizeColumn: 1fr,
     $numRow: 12,
     $sizeRow: 1fr
   );
-  @include imageSize($wt: 100%, $ht: 100vh);
 
   &__menu {
     @include lineGrid(
@@ -50,9 +50,5 @@
     padding-bottom: 5px;
     margin-top: 10px;
     outline: none;
-  }
-
-  &__link {
-    display: block;
   }
 }
