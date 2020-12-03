@@ -3,4 +3,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./images\\dante.jpg":[["dante.ced58e11.jpg","UHNw"],"UHNw"]}],"QLGq":[function(require,module,exports) {
 "use strict";require("../../src/social.scss");
 },{"../../src/social.scss":"OFDm"}]},{},["QLGq"], null)
-//# sourceMappingURL=social.6f7bda69.js.map
+//# sourceMappingURL=social.2f3ee41d.js.map
